@@ -11,6 +11,10 @@ int main()
     return 0;
 }
 
+/*
+	Feature for testing
+
+*/
 void uint1024_test()
 {
     uint1024_t first_uint1024, second_uint1024, temp_result;
