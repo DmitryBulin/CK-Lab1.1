@@ -25,6 +25,10 @@ int main(int argc, char** argv)
         return 1;
     }
 
+	/*
+		Some new feature
+	*/
+
     process_requested_options(operated_file);
 
     fclose(operated_file);
