@@ -29,6 +29,8 @@ int main(int argc, char** argv)
 		Some new feature
 	*/
 
+	//Small feature 2
+	
     process_requested_options(operated_file);
 
     fclose(operated_file);
