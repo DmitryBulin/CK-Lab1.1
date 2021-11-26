@@ -17,7 +17,7 @@ int main(int argc, char** argv)
 {
     for (int i = 1; i < argc - 1; i++)
         check_argument_for_valid_option(argv[i]);
-
+	//Extra bug fix in reading file
     FILE* operated_file = fopen(argv[argc - 1], "r");
     if (!operated_file)
     {
@@ -25,6 +25,12 @@ int main(int argc, char** argv)
         return 1;
     }
 
+	/*
+		Some new feature
+	*/
+
+	//Small feature 2
+	
     process_requested_options(operated_file);
 
     fclose(operated_file);
