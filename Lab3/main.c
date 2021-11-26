@@ -26,6 +26,13 @@ unsigned long long int required_time_gap;
 time_t *request_times;
 request_statistic *failed_requests;
 
+/*
+
+	Great feature
+
+*/
+
+
 int main(int argc, char** argv)
 {
     char valid_arguments = check_arguments_validation(argc, argv);
@@ -87,11 +94,14 @@ int main(int argc, char** argv)
         request_buff = calloc(request_length, sizeof(char) + 1);
         strncpy(request_buff, line_buff + request_start_index, request_length);
         request_buff[request_length] = '\0';
-
+		
         //Parsing request status
         temp_index += 3;
         request_status = (line_buff[temp_index] - '0') * 100 + (line_buff[temp_index + 1] - '0') * 10 + (line_buff[temp_index + 2] - '0');
-        if (request_status / 100 == 5)
+        /*
+			Fixed parsing
+		*/
+		if (request_status / 100 == 5)
         {
             proccess_new_failed_request(request_length, request_buff);
         }
