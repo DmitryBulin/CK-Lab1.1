@@ -32,6 +32,11 @@ uint1024_t add_op(uint1024_t x, uint1024_t y)
     unsigned long carry = 0;
     unsigned long block_result;
 
+	/*
+		Fixed add operation
+		
+	*/
+	
     for (int i = 0; i < UINT1024_BLOCK_COUNT; i++)
     {
         block_result = x.data[i] + y.data[i] + carry;
