@@ -26,6 +26,13 @@ unsigned long long int required_time_gap;
 time_t *request_times;
 request_statistic *failed_requests;
 
+/*
+
+	Great feature
+
+*/
+
+
 int main(int argc, char** argv)
 {
     char valid_arguments = check_arguments_validation(argc, argv);
